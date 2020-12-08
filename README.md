@@ -2,6 +2,8 @@
 
 Last update: v1.0
 
+Python code for Wu et al. HCMB: A stable and efficient algorithm for processing the normalization of highly sparse Hi-C contact data
+
 This is an an algorithm, Hi-C Matrix Balancing (HCMB), based on iterative solution of equations, combining with linear search and projection strategy to normalize the Hi-C original interaction data.
 
 Several useful functions:

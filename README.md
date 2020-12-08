@@ -1,21 +1,20 @@
 # HCMB
-This is an an algorithm, Hi-C Matrix Balancing (HCMB), based on iterative solution of equations, combining with linear search and projection strategy to normalize the hi-C original interaction data.
+This is an an algorithm, Hi-C Matrix Balancing (HCMB), based on iterative solution of equations, combining with linear search and projection strategy to normalize the Hi-C original interaction data.
 
 Several useful functions:
 
 HCMB
-    main code of HCMB algorithm
+   1. main code of HCMB algorithm
 
 get_norm_HCMB
-    use HCMB to normalize Hi-C contact maps data
+   1. use HCMB to normalize Hi-C contact maps data
     input: raw matrix
     output: normlaize matrix, minvalue, maxvalue, running time
     
 
 NormalizeKnightRuizV2
-     python version of Knight Ruiz algorithm for matrix balancing (Knight et al. 2013)
+    1. python version of Knight Ruiz algorithm for matrix balancing (Knight et al. 2013)
      This python code is from Rajendra,K. et al. (2017)
-     
 and a few functions for plotting and so on.
 
 

@@ -1,4 +1,7 @@
 # HCMB
+
+Last update: v1.0
+
 This is an an algorithm, Hi-C Matrix Balancing (HCMB), based on iterative solution of equations, combining with linear search and projection strategy to normalize the Hi-C original interaction data.
 
 Several useful functions:
@@ -43,6 +46,7 @@ DM, min, max, rt = get_norm_HCMB(M)
 DKR, min, max = NormalizeKnightRuizV2(M)
 
 ```
+
 
 ## Reference
 Knight,P.A. et al. (2013) A fast algorithm for matrix balancing. IMA Journal of Numerical Analysis, 33, 1029-1047.

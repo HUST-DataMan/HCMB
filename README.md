@@ -20,8 +20,29 @@ NormalizeKnightRuizV2
 
 * Python version of Knight Ruiz algorithm for matrix balancing (Knight et al. 2013). This python code is from Rajendra,K. et al. (2017)
 
+  input: raw contact matrix n-by-n
+  
+  output: normlaize matrix, minvalue, maxvalue
+  
 and a few functions for plotting and so on.
 
+## Requirements
+* Python 3
+* numpy
+* scipy
+* matplotlib
+* gcMapExplorer
+
+
+## Usage
+```
+from HCMB import get_norm_HCMB, NormalizeKnightRuizV2
+
+# M is nxn matrix type: numpy.ndarray
+DM, min, max, rt = get_norm_HCMB(M)
+DKR, min, max = NormalizeKnightRuizV2(M)
+
+```
 
 ## Reference
 Knight,P.A. et al. (2013) A fast algorithm for matrix balancing. IMA Journal of Numerical Analysis, 33, 1029-1047.

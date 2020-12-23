@@ -1,6 +1,6 @@
 # HCMB
 
-Last update: v1.0
+Last update: v1.0.1
 
 Python code for Wu et al. HCMB: A stable and efficient algorithm for processing the normalization of highly sparse Hi-C contact data
 

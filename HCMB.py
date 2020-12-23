@@ -438,7 +438,7 @@ def check_result_plot(D_mat_real, mapName, method):
     plt.show()
 
 # compare
-def plot_comparison_for_chromosome(matrix1, matrix2, mapName, titleX, titleY):
+def plot_compare(matrix1, matrix2, mapName, titleX, titleY):
     import matplotlib as mpl
 
     fig = plt.figure(figsize=(13, 13))  # Figure size
@@ -447,8 +447,8 @@ def plot_comparison_for_chromosome(matrix1, matrix2, mapName, titleX, titleY):
 
     # Mask any bins that have zero value, since both map are calculated from same raw map,
     # same bins will have missing data
-    matlabNormCCmapMasked = np.ma.masked_equal(matrix1, 0.0, copy=False)
-    gcMapExpNormCCmapMasked = np.ma.masked_equal(matrix2, 0.0, copy=False)
+    M1_Masked = np.ma.masked_equal(matrix1, 0.0, copy=False)
+    M2_Masked = np.ma.masked_equal(matrix2, 0.0, copy=False)
 
     ax = fig.add_subplot(2, 2, 1)  # Axes plot
     ax.set_yscale("log", nonposy='clip')  # Set Y-axis to log scale
@@ -456,9 +456,9 @@ def plot_comparison_for_chromosome(matrix1, matrix2, mapName, titleX, titleY):
     ax.set_title('HCMB vs KR normalized maps on {0}'.format(mapName))  # Title plot
 
     # Plot for Pearson correlation
-    # Plot only those bins that do not have missing data (> zero)
+    # Plot only those bins that do not have missing data
     # 散点图
-    ax.scatter(matlabNormCCmapMasked.compressed(), gcMapExpNormCCmapMasked.compressed(), marker='o', s=6)
+    ax.scatter(M1_Masked.compressed(), M2_Masked.compressed(), marker='o', s=6)
     #    ax.set_xlabel('HCMB Normalized values')
     #    ax.set_ylabel('KR Normalized values')
     ax.set_xlabel(titleX)
